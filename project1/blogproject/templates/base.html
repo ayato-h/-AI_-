@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} ブログアプリ</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="{% static 'casino/img/logo.png'%}" class="logo-img">
+             </div>
+        <div class="nav-right">
+        </div>
+    </nav>
+
+    <div class="content-body">
+        <h1>{% block h1 %}{% endblock %}</h1>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
